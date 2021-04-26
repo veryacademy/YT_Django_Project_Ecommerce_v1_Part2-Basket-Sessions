@@ -12,9 +12,9 @@ class TestBasketView(TestCase):
         Product.objects.create(category_id=1, title='django beginners', created_by_id=1,
                                slug='django-beginners', price='20.00', image='django')
         Product.objects.create(category_id=1, title='django intermediate', created_by_id=1,
-                               slug='django-beginners', price='20.00', image='django')
+                               slug='django-intermediate', price='20.00', image='django')
         Product.objects.create(category_id=1, title='django advanced', created_by_id=1,
-                               slug='django-beginners', price='20.00', image='django')
+                               slug='django-advanced', price='20.00', image='django')
         self.client.post(
             reverse('basket:basket_add'), {"productid": 1, "productqty": 1, "action": "post"}, xhr=True)
         self.client.post(
